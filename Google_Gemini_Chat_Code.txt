@@ -1,0 +1,25 @@
+# import package
+import google.generativeai as genai
+
+# Configure the Key
+googleKey="<ENTER_KEY>"
+genai.configure(api_key=googleKey)
+
+# Select model
+model = genai.GenerativeModel('gemini-pro')
+
+
+# Start chat with unlimited till user say Done
+chat=model.start_chat(history=[])
+
+while True:
+  # Asking the question
+  question=input("Enter Question:")
+  if(question == "Done"):
+    break # When user say 'Done' it will stop
+  else:  # It will keep asking the question
+    # generate response
+    response = chat.send_message(question)
+    # print response
+    print(response.text)
+
