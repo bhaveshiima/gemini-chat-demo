@@ -1,31 +1,15 @@
 # gemini-chat-demo
 Creating Chat Demo using Google Gemini using Python and Google Colab
 
-**Follow the code**
+We are creating simple chat application using Python
 
+So in this use case, we are going to write Python code, The code is asking the question also maintain the history and based on the previous text it will generate the answer like ChatGPT.
 
-**import package**  <br>
-import google.generativeai as genai
+You can follow the code attached in Google_Gemini_Chat_Code.txt file
+You can also import the Google_Gemini_Demo.ipynb file in your Google Colab
 
-**Configure the Key**  <br>
-you have to generate a KEY to use Google Gemini model <br><br>
-googleKey="<ENTER_KEY>"  <br>
-genai.configure(api_key=googleKey) <br><br>
+Hope you enjoy this demo...!
 
-**Select model** <br>
-Based on the use case we need to select model, here we are dealing with text so we use the gemini-pro <br>
-If we deal with image and video then we need to use the gemini-pro-vision model <br><br>
-model = genai.GenerativeModel('gemini-pro')
-
-**Asking question** <br><br>
-chat=model.start_chat(history=[])  <br><br>
-
-while True: <br>
-  question=input("Enter Question:")   <br>
-  if(question == "Done"): <br>
-    break <br>
-  else:  <br>
-    response = chat.send_message(question) <br>
-    print(response.text) <br>
-
+Regards
+Bhavesh Patel
   
